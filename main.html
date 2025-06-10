@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Типи Даних у JavaScript поділяються на дві категорії: примітивні та об'єктні.</h2>
+    <h3>Примітивні типи</h3>
+    <ul>
+        <li>string - (const string = "Hello World";)</li>
+        <li>number - (const num = 777;)</li>
+        <li>boolean - (const weArePotatoes = true;)</li>
+        <li>undefined - це наприклад не оголошена змінна(let x;)</li>
+        <li>null - вказує на відсутність значення (let x;)</li>
+        <li>bigint - (const bigNumber = 12345678901234567890123456789012345678910n;)</li>
+        <li>symbol - (Symbol('description');)</li>
+    </ul>
+    <h3>Об'єктні Типи Даних</h3>
+    <p>Включають в себе об'єкти (object), масиви (array), функції (function) та інші. 
+        Вони володіють складною структурою та передаються за посиланням, 
+        що означає, що при копіюванні створюється посилання на той самий об'єкт.</p>
+    <h2>Danger zone <span class="danger_zone">&#9888;</span></h2>
+    <table>
+        <tr>
+            <td>typeof null; // "object"</td>
+            <td>null – це "нічого", але повертається "object" через історичну помилку в JavaScript, яку вже не виправляють для сумісності.</td>
+        </tr>
+        <tr>
+            <td>1 + '2'; // "12"</td>
+            <td>Додавання числа і рядка</td>
+        </tr>
+        <tr>
+            <td>[] + []; // ""<br>[1, 2] + [3];  // "1,23"</td>
+            <td>масиви автоматично перетворюються у рядки</td>
+        </tr>
+        <tr>
+            <td>false == 0; // true <br> false === 0; // false</td>
+            <td>== виконує неявне приведення типів. <br>=== — строге порівняння без приведення</td>
+        </tr>
+        <tr>
+            <td>NaN === NaN; // false</td>
+            <td>NaN (Not-a-Number) — єдиний тип у JS, який не дорівнює сам собі.</td>
+        </tr>
+        <tr>
+            <td>[] == false; // true</td>
+            <td>Порожній масив → '' (рядок) → 0 → false, от і [] == false → true.</td>
+        </tr>
+        <tr>
+            <td>undefined + 1; // NaN</td>
+            <td>undefined не перетворюється на число напряму → результат NaN</td>
+        </tr>
+        <tr>
+            <td>true + true;</td>
+            <td>true → 1, тому 1 + 1 = 2</td>
+        </tr>
+        <tr>
+            <td>{} + []; // 0 <br> [] + {}; // "[object Object]"</td>
+            <td>Синтаксис {} на початку рядка трактується як блок коду, а не об'єкт.</td>
+        </tr>
+    </table>
+    <div class="box">
+      <div class="column"><img src="https://scontent-waw2-1.xx.fbcdn.net/v/t39.30808-6/480224361_1119159993239303_2623394234209765258_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=GZXk5Qn3-OEQ7kNvwHKwXtZ&_nc_oc=Adlhjz-8HEYoB6GZGBxx-V52vwpyuRsBV5zjNn7V3FdGum8DrT4mmRrTu_Wz933mAho&_nc_zt=23&_nc_ht=scontent-waw2-1.xx&_nc_gid=RqzriGhtKkuPWd0imvwoMw&oh=00_AfNRFDjgtK_A0ZqdKFG1Ocfx-Gz3yZFQvUT_hZUP-BYBEQ&oe=684E6F15" alt="тобто звичайний цирк направлений на мене" 
+      title="тобто звичайний цирк --- направлений на мене " width="500px"></div>
+    <div><p><span class="danger_zone">&#9888;</span>Null має тип "object" у JavaScript з історичних причин. Коли JavaScript був розроблений на початку 1990-х, 
+        помилка була допущена в дизайні мови, і тип даних "null" був помилково визначений як "object". 
+        Ця помилка залишилася в мові для забезпечення сумісності з існуючими програмами. Тобто тип "object"
+        для null - це особливість мови JavaScript, яку потрібно пам'ятати при роботі з цим значенням.</p>
+        <br><br><br>
+    <blockquote>"Окремо цікава ситуація склалася навколо  так називаємих "об'єктів" вони же масиви і вони же фунуції; також null має ознаки Кварталу 95" - Ігор Гофман.</blockquote></div></div>
+      <br> <br>
+      <h2>Після декількох годин вникання</h2>
+      <iframe width="836" height="480" src="https://www.youtube.com/embed/JWP5ei3aXek" title="Когда понял весь этот цирк.  #Гофман"></iframe>
+      <script src="main.js"></script>
+</body>
+</html>

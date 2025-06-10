@@ -1,0 +1,41 @@
+body {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 4%;
+    background: linear-gradient(rgb(206, 168, 168), rgb(198, 198, 151));
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+.box {
+    display: flex;
+    gap: 30px;
+}
+
+.column {
+    flex: 1;
+    text-align: justify;
+}
+
+.danger_zone {
+    color: rgb(255, 0, 0);
+}
+
+table {
+    border-spacing: 10px;
+}
+
+table td{
+    
+    background-color: antiquewhite;
+}
+
+table td {
+    color: rgb(28, 69, 15);
+}
+
+table td:first-child {
+    background-color: aqua;
+}
